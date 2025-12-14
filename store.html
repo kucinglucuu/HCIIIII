@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JCI Store</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JCI – Aerial Technology</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">JCI</div>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Homepage</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <style>
+    .store-hero {
+      padding: 160px 0 100px;
+      background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)),
+        url('https://images.unsplash.com/photo-1524143986875-3b098d78b363?auto=format&fit=crop&w=1600&q=80') center/cover;
+    }
+
+    .store-hero h1 {
+      font-size: 56px;
+      margin-bottom: 16px;
+    }
+
+    .store-hero p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 700px;
+    }
+
+    .store-options {
+      padding: 100px 0;
+      background: var(--secondary-bg);
+    }
+
+    .store-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .store-card {
+      background: var(--primary-bg);
+      border-radius: 14px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .store-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 40px rgba(0,168,232,0.25);
+    }
+
+    .store-card img {
+      height: 60px;
+      margin-bottom: 24px;
+    }
+
+    .store-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .store-card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 30px;
+      background: var(--accent-color);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .cta-btn:hover {
+      background: #0090c7;
+      transform: scale(1.05);
+    }
+
+    .store-cta {
+      padding: 100px 0;
+      text-align: center;
+      background: var(--primary-bg);
+    }
+
+    .store-cta h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .store-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .store-hero h1 { font-size: 40px; }
+      .store-cta h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <section class="store-hero">
+    <div class="container">
+      <h1>Store</h1>
+      <p>Temukan produk resmi JCI dan lakukan pembelian dengan aman melalui platform terpercaya.</p>
+    </div>
+  </section>
+
+
+  <section class="store-options">
+    <div class="container">
+      <div class="store-grid">
+
+        <div class="store-card">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.2keT1fTd8FCc-1DI4Lyj1gAAAA?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Blibli">
+          <h3>Blibli</h3>
+          <p>aplikasi iOS resmi di Blibli.</p>
+          <a href="https://www.blibli.com/merchant/dji-flagship-store/DJO-70003?pickupPointCode=PP-3179602&fbbActivated=false" class="cta-btn">Shop Now</a>
+        </div>
+
+        <div class="store-card">
+          <img src="https://onecms-res.cloudinary.com/image/upload/v1676873758/mediacorp/tdy/image/2023/02/20/shopee_logo_1600x900.jpg" alt="Shopee">
+          <h3>Shopee</h3>
+          <p>aplikasi iOS resmi di Shopee.</p>
+          <a href="https://shopee.co.id/dji.official.shop?entryPoint=ShopBySearch&searchKeyword=dji%20official%20store" class="cta-btn">Shop Now</a>
+        </div>
+
+        <div class="store-card">
+          <img src="https://static.vecteezy.com/system/resources/previews/054/650/845/non_2x/tokopedia-logo-free-tokopedia-logo-download-free-png.png" alt="Tokopedia">
+          <h3>Tokopedia</h3>
+          <p>aplikasi iOS resmi di Tokopedia.</p>
+          <a href="https://www.tokopedia.com/dji-official-store" class="cta-btn">Shop Now</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ 
+
+  </section>
+  <footer class="footer">
+    © 2025 JCI Aerial Technology. All rights reserved.
+  </footer>
+
+</body>
+</html>

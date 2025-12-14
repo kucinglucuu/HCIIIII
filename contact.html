@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | JCI</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .contact-page {
+      padding: 140px 0 100px;
+      background: var(--primary-bg);
+    }
+
+    .contact-wrapper {
+      max-width: 600px;
+      margin: auto;
+      background: var(--secondary-bg);
+      padding: 40px;
+      border-radius: 16px;
+    }
+
+    .contact-wrapper h1 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #111;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .error {
+      color: #ff5b5b;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      background: var(--accent-color);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  
+ <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">JCI</div>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Homepage</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="contact.html" >Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+ 
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-wrapper">
+        <h1>Contact Us</h1>
+
+        <form id="contactForm">
+
+          
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="name">
+            <div class="error" id="nameError"></div>
+          </div>
+
+         
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email">
+            <div class="error" id="emailError"></div>
+          </div>
+
+         
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" id="phone">
+            <div class="error" id="phoneError"></div>
+          </div>
+
+          
+          <div class="form-group">
+            <label>Support Type</label>
+            <select id="support">
+              <option value="">-- Select --</option>
+              <option>Technical</option>
+              <option>Product</option>
+              <option>Partnership</option>
+            </select>
+            <div class="error" id="supportError"></div>
+          </div>
+
+          
+          <div class="form-group">
+            <label>Message</label>
+            <textarea id="message"></textarea>
+            <div class="error" id="messageError"></div>
+          </div>
+
+          
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="terms">
+            <label for="terms">I agree to the Terms of Service</label>
+          </div>
+          <div class="error" id="termsError"></div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let valid = true;
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const support = document.getElementById('support').value;
+      const message = document.getElementById('message').value.trim();
+      const terms = document.getElementById('terms').checked;
+
+      
+      document.querySelectorAll('.error').forEach(e => e.textContent = '');
+
+     
+      if (name === '') {
+        document.getElementById('nameError').textContent = 'Name is required';
+        valid = false;
+      }
+
+      
+      if (message.length < 10) {
+        document.getElementById('messageError').textContent = 'Message must be at least 10 characters';
+        valid = false;
+      }
+
+      
+      if (!email.includes('@')) {
+        document.getElementById('emailError').textContent = 'Email must contain @';
+        valid = false;
+      }
+
+      
+      for (let i = 0; i < phone.length; i++) {
+        if (phone[i] < '0' || phone[i] > '9') {
+          document.getElementById('phoneError').textContent = 'Phone number must contain only numbers';
+          valid = false;
+          break;
+        }
+      }
+
+     
+      if (support === '') {
+        document.getElementById('supportError').textContent = 'Please select support type';
+        valid = false;
+      }
+
+      
+      if (!terms) {
+        document.getElementById('termsError').textContent = 'You must agree to the Terms';
+        valid = false;
+      }
+
+      if (valid) {
+        alert('Message sent successfully!');
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>

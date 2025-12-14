@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JCI Forum</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .forum-page {
+      padding: 140px 0 100px;
+      background: var(--primary-bg);
+    }
+
+    .forum-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .forum-header h1 {
+      font-size: 36px;
+    }
+
+    .forum-search input {
+      background: #111;
+      border: 1px solid #222;
+      color: var(--text-primary);
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      outline: none;
+      width: 260px;
+    }
+
+    .forum-filters {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .forum-filters button {
+      background: transparent;
+      border: 1px solid var(--accent-color);
+      color: var(--text-primary);
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .forum-filters button:hover,
+    .forum-filters button.active {
+      background: var(--accent-color);
+    }
+
+    .forum-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .forum-post {
+      background: var(--secondary-bg);
+      padding: 28px;
+      border-radius: 14px;
+      transition: var(--transition);
+    }
+
+    .forum-post:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,168,232,0.15);
+    }
+
+    .post-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .post-user {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .verified {
+      color: var(--accent-color);
+      font-size: 12px;
+      margin-left: 6px;
+    }
+
+    .post-stats {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .post-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .post-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .forum-header h1 { font-size: 28px; }
+      .forum-search input { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+ <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">JCI</div>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Homepage</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  
+  <section class="forum-page">
+    <div class="container">
+
+      <div class="forum-header">
+        <h1>Community Forum</h1>
+        <div class="forum-search">
+          <input type="text" placeholder="Search discussions...">
+        </div>
+      </div>
+
+      <div class="forum-filters">
+        <button class="active">Hot</button>
+        <button>Technology</button>
+        <button>Drone Tips</button>
+        <button>Firmware</button>
+        <button>Community</button>
+      </div>
+
+      <div class="forum-list">
+
+        <div class="forum-post">
+          <div class="post-header">
+            <div class="post-user">JCI Official <span class="verified">✔</span></div>
+            <div class="post-stats">
+              <span>👁 2.3k</span>
+              <span>❤️ 540</span>
+              <span>🔗 120</span>
+            </div>
+          </div>
+          <div class="post-title">Introducing SkyVision X7 Firmware Update</div>
+          <div class="post-desc">Update terbaru membawa peningkatan stabilisasi kamera, optimasi baterai, dan sistem navigasi AI.</div>
+        </div>
+
+        <div class="forum-post">
+          <div class="post-header">
+            <div class="post-user">AeroTech_ID <span class="verified">✔</span></div>
+            <div class="post-stats">
+              <span>👁 1.4k</span>
+              <span>❤️ 312</span>
+              <span>🔗 87</span>
+            </div>
+          </div>
+          <div class="post-title">Best Settings for Cinematic Drone Shots</div>
+          <div class="post-desc">Sharing konfigurasi kamera dan flight mode untuk menghasilkan footage sinematik profesional.</div>
+        </div>
+
+        <div class="forum-post">
+          <div class="post-header">
+            <div class="post-user">DroneHunter</div>
+            <div class="post-stats">
+              <span>👁 980</span>
+              <span>❤️ 190</span>
+              <span>🔗 45</span>
+            </div>
+          </div>
+          <div class="post-title">Battery Care Tips for Long-Term Usage</div>
+          <div class="post-desc">Tips merawat baterai drone agar awet dan performa tetap optimal dalam jangka panjang.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">© 2025 JCI Community Forum</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

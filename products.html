@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JCI Products</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .products-hero {
+      padding: 160px 0 100px;
+      background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)),
+        url('gambar/drone.jpg') center/cover;
+    }
+
+    .products-hero h1 {
+      font-size: 56px;
+      margin-bottom: 16px;
+    }
+
+    .products-hero p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 720px;
+    }
+
+    .category-nav {
+      padding: 40px 0;
+      background: var(--primary-bg);
+      border-bottom: 1px solid #222;
+    }
+
+    .category-list {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .category-list a {
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: 1px solid var(--accent-color);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+
+    .category-list a:hover {
+      background: var(--accent-color);
+    }
+
+    .product-highlights {
+      padding: 100px 0;
+      background: var(--secondary-bg);
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .highlight-card {
+      background: var(--primary-bg);
+      border-radius: 14px;
+      padding: 32px;
+      transition: var(--transition);
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 40px rgba(0,168,232,0.25);
+    }
+
+    .highlight-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .highlight-card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .highlight-card a {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 30px;
+      background: var(--accent-color);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .products-hero h1 { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  
+   <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">JCI</div>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Homepage</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <section class="products-hero">
+    <div class="container">
+      <h1>Products</h1>
+      <p>Jelajahi berbagai kategori dan teknologi drone JCI yang dirancang untuk performa, presisi, dan keandalan maksimal.</p>
+    </div>
+  </section>
+
+
+
+ <section class="products-simple">
+  <div class="container">
+
+    <h3 class="products-label">products</h3>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <img src="gambar/166c2966a067d8fddee226bb8dd07704.jpg" alt="VantaSky M6">
+        <span>VantaSky M6</span>
+      </div>
+
+      <div class="product-card">
+        <img src="gambar/Discover the cutting-edge in aerial technology with our futuristic drone! 🚀.jpg" alt="Aether X5">
+        <span>Aether X5</span>
+      </div>
+
+      <div class="product-card">
+        <img src="gambar/download (5).jpg" alt="CloudRider Neo">
+        <span>CloudRider Neo</span>
+      </div>
+
+      <div class="product-card">
+        <img src="gambar/drone putih.jpg" alt="Falcon XR">
+        <span>Falcon XR</span>
+      </div>
+
+      <div class="product-card">
+        <img src="gambar/This First-Response Drone’s Bladeless Design Could Change Emergency Rescue Forever - Yanko Design.jpg" alt="Horizon S8">
+        <span>Horizon S8</span>
+      </div>
+
+      <div class="product-card">
+        <img src="gambar/The Future Of AI In Autonomous Drone.jpg" alt="AeroFlex Pro">
+        <span>AeroFlex Pro</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  
+  <footer class="footer">
+    © 2025 JCI Aerial Technology. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
